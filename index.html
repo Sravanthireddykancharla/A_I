@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HIRANYA ROYALE — Where Heritage Meets Modern Prestige</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Roboto, Arial, sans-serif; }
+    body { background-color: #14050a; color: #fdf8f5; line-height: 1.65; }
+
+    /* Navbar */
+    nav {
+      background: rgba(20, 5, 10, 0.96);
+      padding: 16px 6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1.5px solid #e5b887;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo { font-size: 21px; font-weight: 900; color: #f6d198; letter-spacing: 1.8px; }
+    .nav-btn {
+      background: linear-gradient(135deg, #f6d198, #d49b54);
+      color: #14050a;
+      padding: 9px 22px;
+      border-radius: 25px;
+      font-weight: 800;
+      font-size: 14px;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* 1. HERO SECTION & SUBTITLE */
+    .hero {
+      background: radial-gradient(circle at top center, #3b0d1e 0%, #1d0710 55%, #14050a 100%);
+      padding: 95px 20px 85px;
+      text-align: center;
+      border-bottom: 3px solid #d49b54;
+    }
+    .hero-pill {
+      display: inline-block;
+      background: rgba(246, 209, 152, 0.14);
+      border: 1px solid #e5b887;
+      color: #f6d198;
+      padding: 6px 18px;
+      border-radius: 30px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.8px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: 50px;
+      font-weight: 900;
+      color: #ffffff;
+      max-width: 850px;
+      margin: 0 auto 18px;
+      line-height: 1.15;
+    }
+    .hero h1 span { color: #f6d198; }
+    .hero p {
+      font-size: 20px;
+      color: #ead7ce;
+      max-width: 710px;
+      margin: 0 auto 36px;
+      font-weight: 500;
+    }
+
+    /* Buttons */
+    .btn-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+    .btn-gold {
+      background: linear-gradient(135deg, #f6d198, #d49b54);
+      color: #14050a;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(212, 155, 84, 0.32);
+    }
+    .btn-outline {
+      background: rgba(255, 255, 255, 0.04);
+      color: #f6d198;
+      border: 2px solid #e5b887;
+      padding: 13px 28px;
+      border-radius: 30px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* 2. SOCIAL PROOF STRIP */
+    .social-proof {
+      max-width: 1080px;
+      margin: -35px auto 65px;
+      padding: 0 20px;
+    }
+    .proof-grid {
+      background: #240913;
+      border: 1.5px solid #d49b54;
+      border-radius: 18px;
+      padding: 28px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 18px;
+      text-align: center;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.65);
+    }
+    .proof-item h3 { font-size: 30px; color: #f6d198; font-weight: 900; }
+    .proof-item p { font-size: 14px; color: #ead7ce; font-weight: 600; }
+
+    /* Shared Section Styles */
+    .container { max-width: 1100px; margin: 70px auto; padding: 0 20px; }
+    .sec-head { text-align: center; margin-bottom: 42px; }
+    .sec-head span { color: #e5b887; font-size: 13px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+    .sec-head h2 { font-size: 35px; color: #ffffff; margin-top: 6px; font-weight: 800; }
+
+    /* 3. KEY HIGHLIGHTS (RESIDENCES) */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: linear-gradient(160deg, #280a16, #1b060e);
+      border: 1px solid rgba(229, 184, 135, 0.45);
+      border-radius: 18px;
+      padding: 30px;
+    }
+    .card-badge {
+      display: inline-block;
+      background: rgba(246, 209, 152, 0.16);
+      color: #f6d198;
+      padding: 5px 14px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+    .card h3 { font-size: 22px; color: #ffffff; margin-bottom: 10px; }
+    .card p { font-size: 15px; color: #e2cdc3; margin-bottom: 18px; }
+    .card-meta { font-size: 14px; color: #f6d198; font-weight: 700; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 14px; }
+
+    /* 4. BENEFITS SECTION */
+    .benefits-box {
+      background: #1f0711;
+      border: 1px solid rgba(229, 184, 135, 0.4);
+      border-radius: 22px;
+      padding: 44px 28px;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 20px;
+    }
+    .benefit-item {
+      background: #14050a;
+      padding: 24px;
+      border-radius: 14px;
+      border-left: 4px solid #e5b887;
+    }
+    .benefit-item h4 { color: #f6d198; font-size: 18px; margin-bottom: 8px; }
+    .benefit-item p { color: #e2cdc3; font-size: 14px; }
+
+    /* 5. LOCATION ADVANTAGE */
+    .loc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+    .loc-card {
+      background: #240913;
+      border: 1px solid rgba(229, 184, 135, 0.4);
+      border-radius: 16px;
+      padding: 22px;
+      text-align: center;
+    }
+    .loc-time { font-size: 26px; font-weight: 900; color: #f6d198; }
+    .loc-place { font-size: 15px; color: #fdf8f5; font-weight: 600; margin-top: 4px; }
+
+    /* 6. FINAL CTA BANNER */
+    .final-cta {
+      background: linear-gradient(135deg, #360c1c, #17050c);
+      border: 2px solid #d49b54;
+      border-radius: 22px;
+      padding: 52px 24px;
+      text-align: center;
+      margin: 65px auto 40px;
+    }
+    .final-cta h2 { font-size: 35px; color: #f6d198; margin-bottom: 12px; }
+    .final-cta p { font-size: 17px; color: #ead7ce; max-width: 660px; margin: 0 auto 30px; }
+
+    /* Popups */
+    .popup {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.86);
+      justify-content: center;
+      align-items: center;
+      z-index: 999;
+    }
+    .popup-box {
+      background: #240913;
+      border: 2px solid #f6d198;
+      border-radius: 20px;
+      padding: 34px;
+      max-width: 440px;
+      width: 90%;
+      text-align: center;
+      position: relative;
+    }
+    .close { position: absolute; top: 12px; right: 18px; font-size: 28px; color: #f6d198; cursor: pointer; }
+    .popup-box h2 { color: #f6d198; margin-bottom: 12px; }
+    .popup-box p { color: #fdf8f5; font-size: 15px; line-height: 1.8; }
+    .wa-btn {
+      display: inline-block;
+      margin-top: 18px;
+      background: #22c55e;
+      color: #ffffff;
+      padding: 13px 28px;
+      border-radius: 28px;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    footer {
+      text-align: center;
+      padding: 28px;
+      border-top: 1px solid rgba(229, 184, 135, 0.3);
+      color: #b89f94;
+      font-size: 14px;
+    }
+    @media (max-width: 600px) { .hero h1 { font-size: 34px; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">👑 HIRANYA ROYALE</div>
+    <button class="nav-btn" onclick="document.getElementById('visitPop').style.display='flex'">Private Preview</button>
+  </nav>
+
+  <!-- 1. HERO SECTION & SUBTITLE -->
+  <section class="hero">
+    <div class="hero-pill">✨ Invitation-Only Residences • Whitefield, Bengaluru</div>
+    <h1>Where Heritage Meets<br><span>Modern Prestige.</span></h1>
+    <p>Handcrafted 2, 3 & 4 BHK sky-homes designed with timeless royal elegance, vast sunlit decks, and serene green sanctuary views.</p>
+    <div class="btn-row">
+      <button class="btn-gold" onclick="document.getElementById('pricePop').style.display='flex'">💎 Unlock Private Price Sheet</button>
+      <button class="btn-outline" onclick="document.getElementById('visitPop').style.display='flex'">🚘 Book Chauffeur Site Visit</button>
+    </div>
+  </section>
+
+  <!-- 2. SOCIAL PROOF -->
+  <div class="social-proof">
+    <div class="proof-grid">
+      <div class="proof-item"><h3>650+</h3><p>Elite Homeowner Families</p></div>
+      <div class="proof-item"><h3>4.9 ★</h3><p>Verified Customer Rating</p></div>
+      <div class="proof-item"><h3>18+ Yrs</h3><p>Architectural Legacy</p></div>
+      <div class="proof-item"><h3>100%</h3><p>RERA & Vastu Certified</p></div>
+    </div>
+  </div>
+
+  <!-- 3. KEY HIGHLIGHTS -->
+  <div class="container">
+    <div class="sec-head">
+      <span>Key Highlights</span>
+      <h2>🔑 Residences Built for Generations</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <span class="card-badge">Signature Edition</span>
+        <h3>2 BHK Royal Crest</h3>
+        <p>Expansive living spaces, zero-wastage architecture, and private garden-facing balconies crafted for modern connoisseurs.</p>
+        <div class="card-meta">📐 1,340 – 1,480 Sq.Ft. • 100% Vastu</div>
+      </div>
+      <div class="card">
+        <span class="card-badge">Most Coveted</span>
+        <h3>3 BHK Imperial Manor</h3>
+        <p>Three-side open ventilation, zero common walls, private entrance foyer, and panoramic podium views.</p>
+        <div class="card-meta">📐 1,920 – 2,250 Sq.Ft. • Twin Sky Decks</div>
+      </div>
+      <div class="card">
+        <span class="card-badge">Ultra-Exclusive</span>
+        <h3>4 BHK Sovereign Penthouse</h3>
+        <p>Double-height grand salon, imported Italian marble, and private terrace lounge reserved for the select few.</p>
+        <div class="card-meta">📐 3,200 – 3,650 Sq.Ft. • Private Elevator</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. BENEFITS -->
+  <div class="container">
+    <div class="benefits-box">
+      <div class="sec-head">
+        <span>Unmatched Benefits</span>
+        <h2>🛡️ The Hiranya Royale Advantage</h2>
+      </div>
+      <div class="grid-2">
